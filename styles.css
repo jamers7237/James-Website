@@ -1,19 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
+  font-family: Arial, sans-serif;
+  background-image: url('https://assets.editorial.aetnd.com/uploads/2009/10/christmas-trees-gettyimages-1072744106.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  color: #333;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
 }
 
-button {
-  all: unset;
-  padding: 5px 10px;
-  border: black 1px solid;
-  cursor: pointer;
-  user-select: none;
+.countdown-container {
+  background-color: rgba(255,71,71,0.6);
+  padding: 40px;
+  border-radius: 10px;
+  border: 5px solid #228B22;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: white;
+  width: 80%;
+  max-width: 600px;
 }
 
-button:hover {
-  background-color: lightgray;
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+#countdown {
+  display: flex;
+  justify-content: space-around;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.time-unit {
+  text-align: center;
+}
+
+label {
+  font-size: 1rem;
+  margin-top: 10px;
+  display: block;
+  color: #fff7f7;
+}
+
+#message {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  #countdown {
+      flex-direction: column;
+  }
+
+  .time-unit {
+      margin-bottom: 15px;
+  }
 }
